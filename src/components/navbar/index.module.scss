@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: $primary-color;
+  color: $secondary-color;
+  z-index: 3;
+  @include flex-box;
+
+  .link {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+    @include flex-box($gap: 10px);
+
+    li {
+      cursor: pointer;
+      transition: 0.4s;
+      color: $secondary-color;
+
+      &:hover {
+        color: $link-hover-color;
+      }
+    }
+  }
+}

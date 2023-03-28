@@ -1,0 +1,8 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.CardList {
+  @include set-padding;
+  @include flex-box($justify: space-around, $wrap: wrap, $gap: 30px);
+  color: $primary-color;
+}
