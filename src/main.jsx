@@ -20,7 +20,6 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="activities" element={<Activities />} />
       <Route path="activities/:id" element={<ActivitiesId />} />
-      <Route path="city/:id" element={<h1>Specific City</h1>} />
     </Route>
   )
 );

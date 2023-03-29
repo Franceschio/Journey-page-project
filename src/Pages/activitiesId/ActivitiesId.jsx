@@ -14,7 +14,15 @@ export default function ActivitiesId() {
 
   return (
     <div className={styles.ActivitiesId}>
-      <img src={activity.image} alt="" />
+      <div className={styles.leftPage}>
+        <img src={activity.image} alt="product's image" />
+      </div>
+      <div className={styles.rightPage}>
+        <div className={styles.info}>
+          <h3>{activity.title}</h3>
+          <p>{activity.description}</p>
+        </div>
+      </div>
     </div>
   );
 }

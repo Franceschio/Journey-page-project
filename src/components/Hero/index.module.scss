@@ -1,0 +1,24 @@
+@import "../src/styles/mixins";
+@import "../../styles/variables";
+
+.Hero {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .heroOverflow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color: #ffff, $alpha: 0.2);
+    @include flex-box;
+  }
+}

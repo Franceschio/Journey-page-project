@@ -4,4 +4,48 @@
 .ActivitiesId {
   @include set-all;
   color: $primary-color;
+  @include flex-box($justify: flex-start);
+
+  .leftPage {
+    height: calc(100% - 30px);
+    width: 50%;
+    @include flex-box;
+
+    img {
+      height: 60%;
+      width: 60%;
+      object-fit: contain;
+    }
+  }
+
+  .rightPage {
+    height: calc(100% - 30px);
+    width: 50%;
+    @include flex-box;
+
+    .info {
+      background-color: $secondary-color;
+      border-radius: 10px;
+      border: 1px solid rgb(206, 206, 206);
+      @include flex-box($direction: column, $gap: 10px);
+      padding: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .ActivitiesId {
+    @include flex-box($direction: column, $justify: center, $gap: 20px);
+
+    .leftPage {
+      height: 50%;
+      width: 100%;
+    }
+
+    .rightPage {
+      height: 50%;
+      width: 100%;
+      @include flex-box;
+    }
+  }
 }

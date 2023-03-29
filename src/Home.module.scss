@@ -3,5 +3,5 @@
 
 .Home {
   position: relative;
-  @include set-all;
+  min-height: calc(100vh - 30px);
 }
