@@ -1,7 +1,5 @@
 import styles from "./Home.module.scss";
 import CardList from "./components/cardList/CardList";
-import Navbar from "./components/navbar/navbar";
-import Footer from "./components/footer";
 import { GET } from "./utils/http";
 import { useEffect, useState } from "react";
 
@@ -14,9 +12,8 @@ function Home() {
 
   return (
     <div className={styles.Home}>
-      <Navbar />
+      <h1>Home</h1>
       <CardList locationData={locations} />
-      <Footer />
     </div>
   );
 }

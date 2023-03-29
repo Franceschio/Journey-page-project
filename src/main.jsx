@@ -1,4 +1,5 @@
 import React from "react";
+import Layout from "./components/layout/Layout";
 import Home from "./Home";
 import { About } from "./Pages/about/About";
 import {
@@ -12,7 +13,7 @@ import "./index.module.scss";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route>
+    <Route element={<Layout />}>
       <Route path="/" element={<Home />} />
       <Route path="about" element={<About />}>
         <Route path="actvity/:id" element={<h1>Specific activity</h1>} />

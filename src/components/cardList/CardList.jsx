@@ -4,9 +4,9 @@ import Card from "../../card/Card";
 const CardList = ({ locationData }) => {
   return (
     <div className={styles.CardList}>
-      {locationData.map((location) => (
+      {/* {locationData.map((location) => (
         <Card locationData={location} key={location.city.id} />
-      ))}
+      ))} */}
     </div>
   );
 };
