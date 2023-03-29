@@ -11,6 +11,9 @@ const Navbar = () => {
         <Link className={styles.link} to="/about">
           <li>About</li>
         </Link>
+        <Link className={styles.link} to="/activities">
+          <li>Activities</li>
+        </Link>
       </ul>
     </div>
   );

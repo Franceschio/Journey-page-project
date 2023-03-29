@@ -1,5 +1,5 @@
-@import "../../src/styles/variables";
-@import "../../src/styles/mixins";
+@import "../../styles/variables";
+@import "../../styles/mixins";
 
 .Card {
   position: relative;
@@ -13,7 +13,7 @@
   img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
 
   .overflow {
@@ -26,6 +26,10 @@
     @include flex-box;
     transform: translateY(100%);
     transition: 0.4s;
+
+    h2 {
+      cursor: pointer;
+    }
   }
 
   &:hover .overflow {
