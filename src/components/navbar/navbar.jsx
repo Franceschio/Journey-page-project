@@ -12,18 +12,21 @@ const Navbar = () => {
   const onHandleSubmit = (e) => {
     e.preventDefault();
     Navigate(`activities/category/${inputValue}`);
+    window.scrollTo(0, 0);
   };
+
+  const scrollBack = () => window.scrollTo(0, 0);
 
   return (
     <div className={styles.Navbar}>
       <ul>
-        <Link className={styles.link} to="/">
+        <Link onClick={scrollBack} className={styles.link} to="/">
           <li>Home</li>
         </Link>
-        <Link className={styles.link} to="/about">
+        <Link onClick={scrollBack} className={styles.link} to="/about">
           <li>About</li>
         </Link>
-        <Link className={styles.link} to="/activities">
+        <Link onClick={scrollBack} className={styles.link} to="/activities">
           <li>Activities</li>
         </Link>
       </ul>

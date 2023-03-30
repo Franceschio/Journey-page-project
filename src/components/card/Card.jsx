@@ -5,7 +5,9 @@ import { useNavigate } from "react-router";
 const Card = ({ locationData }) => {
   const Navigate = useNavigate();
 
-  const onProductClick = () => Navigate(`/activities/${locationData.id}`);
+  const onProductClick = () => {
+    Navigate(`/activities/${locationData.id}`, window.scrollTo(0, 0));
+  };
   return (
     <div className={styles.Card}>
       <img src={locationData.image} alt="image" />
