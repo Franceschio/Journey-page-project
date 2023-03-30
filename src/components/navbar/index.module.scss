@@ -10,7 +10,7 @@
   background-color: $primary-color;
   color: $secondary-color;
   z-index: 3;
-  @include flex-box;
+  @include flex-box($justify: space-between);
 
   .link {
     text-decoration: none;
@@ -28,6 +28,50 @@
       &:hover {
         color: $link-hover-color;
       }
+    }
+  }
+
+  .search {
+    input {
+      border: none;
+      border-radius: 10px;
+      padding: 5px;
+    }
+
+    .searchText {
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      outline: none;
+    }
+
+    .searchBtn {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      transition: 0.4s;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(173, 173, 173);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .Navbar {
+    ul {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .Navbar {
+    ul {
+      font-size: 0.7rem;
+    }
+    .searchText {
+      width: 90px;
     }
   }
 }

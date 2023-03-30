@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "./components/layout/Layout";
 import Home from "./Home";
 import { About } from "./Pages/about/About";
 import Activities from "./Pages/Actvities/Activities";
 import ActivitiesId from "./Pages/activitiesId/ActivitiesId";
+import Category from "./Pages/category/Category";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
       <Route path="about" element={<About />} />
       <Route path="activities" element={<Activities />} />
       <Route path="activities/:id" element={<ActivitiesId />} />
+      <Route path="activities/category/:id" element={<Category />} />
     </Route>
   )
 );

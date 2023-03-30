@@ -7,13 +7,15 @@
   width: 300px;
   font-size: 10px;
   color: black;
-  border: 1px solid $primary-color;
   overflow: hidden;
+  padding: 10px;
+  border: 1px solid black;
 
   img {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    border-radius: 5px;
   }
 
   .overflow {
@@ -23,12 +25,17 @@
     height: 100%;
     width: 100%;
     background-color: rgba($color: #ffff, $alpha: 0.5);
-    @include flex-box;
+    @include flex-box($direction: column, $gap: 10px);
     transform: translateY(100%);
     transition: 0.4s;
+    padding: 10px;
 
-    h2 {
+    h3 {
       cursor: pointer;
+
+      &:hover {
+        color: $primary-color;
+      }
     }
   }
 

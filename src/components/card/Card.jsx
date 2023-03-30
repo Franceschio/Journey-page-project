@@ -10,7 +10,7 @@ const Card = ({ locationData }) => {
     <div className={styles.Card}>
       <img src={locationData.image} alt="image" />
       <div className={styles.overflow}>
-        <h2 onClick={onProductClick}>{locationData.title}</h2>
+        <h3 onClick={onProductClick}>{locationData.title}</h3>
       </div>
     </div>
   );
