@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const onHandleSubmit = (e) => {
     e.preventDefault();
-    Navigate(`activities/category/${inputValue}`);
+    Navigate(`activities/category?cat=${inputValue}`);
     window.scrollTo(0, 0);
   };
 
@@ -27,7 +27,7 @@ const Navbar = () => {
           <li>About</li>
         </Link>
         <Link onClick={scrollBack} className={styles.link} to="/activities">
-          <li>Activities</li>
+          <li>Products</li>
         </Link>
       </ul>
       <form onSubmit={onHandleSubmit} className={styles.search}>
