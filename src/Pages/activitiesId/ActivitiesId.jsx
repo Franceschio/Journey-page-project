@@ -20,13 +20,17 @@ export default function ActivitiesId() {
         {"<"}
       </div>
       <div className={styles.leftPage}>
-        <img src={activity.image} alt="product's image" />
+        <div className={styles.image}>
+          <img src={activity.image} alt="product's image" />
+          <div className={styles.price}>{activity.price}$</div>
+        </div>
       </div>
       <div className={styles.rightPage}>
         <div className={styles.info}>
           <h3>{activity.title}</h3>
           <p>{activity.description}</p>
         </div>
+        <button className={styles.buy}>Buy</button>
       </div>
     </div>
   );

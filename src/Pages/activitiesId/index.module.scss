@@ -3,7 +3,6 @@
 
 .ActivitiesId {
   @include set-all;
-  color: $primary-color;
   @include flex-box($justify: flex-start);
   min-height: 100vh;
 
@@ -17,6 +16,7 @@
 
     &:hover {
       transform: scale(1.2);
+      color: $primary-color;
     }
   }
 
@@ -25,17 +25,36 @@
     width: 50%;
     @include flex-box;
 
-    img {
+    .image {
       height: 60%;
       width: 60%;
-      object-fit: contain;
+      border: 1px solid black;
+      padding: 10px;
+      position: relative;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+
+      .price {
+        position: absolute;
+        right: 3px;
+        bottom: 3px;
+        background-color: $primary-color;
+        color: $secondary-color;
+        text-align: center;
+        padding: 5px;
+        border-radius: 5px;
+      }
     }
   }
 
   .rightPage {
     height: calc(100% - 30px);
     width: 50%;
-    @include flex-box;
+    @include flex-box($direction: column, $gap: 10px);
 
     .info {
       background-color: $secondary-color;
@@ -47,6 +66,22 @@
 
       p {
         font-size: 0.8rem;
+      }
+    }
+
+    .buy {
+      background-color: $primary-color;
+      color: $secondary-color;
+      text-align: center;
+      padding: 5px;
+      border-radius: 5px;
+      border: none;
+      transition: 0.4s;
+      width: 30%;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba($color: $primary-color, $alpha: 0.8);
       }
     }
   }
