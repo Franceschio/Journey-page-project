@@ -11,7 +11,7 @@ const Card = ({ locationData }) => {
   return (
     <div className={styles.Card}>
       <img src={locationData.image} alt="image" />
-      <div className={styles.overflow}>
+      <div onClick={onProductClick} className={styles.overflow}>
         <h3 onClick={onProductClick}>{locationData.title}</h3>
       </div>
     </div>

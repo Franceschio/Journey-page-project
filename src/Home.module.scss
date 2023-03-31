@@ -3,5 +3,10 @@
 
 .Home {
   position: relative;
-  min-height: calc(100vh - 30px);
+  min-height: 100vh;
+}
+
+.Layout {
+  margin: 0;
+  padding: 0;
 }
