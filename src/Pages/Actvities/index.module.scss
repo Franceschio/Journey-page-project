@@ -3,13 +3,17 @@
 
 .Activites {
   @include set-all;
+
+  .Navbar {
+    position: absolute;
+  }
 }
 
 .filters {
   @include flex-box($direction: column, $gap: 8px);
   width: 100%;
   position: sticky;
-  top: 40px;
+  top: 0px;
   background-color: $secondary-color;
   z-index: 3;
   padding-bottom: 5px;
